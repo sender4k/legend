@@ -27,7 +27,7 @@
           flex-basis: 50%;
           .menu {
             text-align: center;
-            i{
+            i {
               border-radius: 10%;
               padding: 5px;
               background-color: gold;
@@ -39,12 +39,157 @@
           }
           .nav-links {
             display: none;
+            z-index: 1;
+            //height: 0;
+            transition: visibility 1s ease;
             position: absolute;
+            width: 100%;
             top: 100%;
             left: 0;
+            background-color: #0b333f;
+            padding-left: 100px;
+            font-size: 22px;
+            color: white;
+            li {
+              list-style-type: none;
+              padding: 10px 0;
+              a {
+                color: white;
+                text-decoration: none;
+              }
+            }
+            li:hover a {
+              color: gold;
+            }
+            .more {
+              position: relative;
+              width: 70px;
+              .dropDown {
+                position: absolute;
+                border: 1px solid gold;
+                left: 100%;
+                top: 0;
+                padding: 0 20px;
+                background-color: gray;
+                //z-index: 2;
+                display: none;
+                a {
+                  color: white;
+                  padding: 10px 0;
+                }
+              }
+            }
+            .more:hover a {
+              color: gold;
+            }
+            .more:hover .dropDown {
+              display: block;
+            }
           }
-          .moreDropdown {
-            display: none;
+          .nav-links.height {
+            height: 300%;
+          }
+          .nav-links.active {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+@include breakpoint($tablet) {
+  .wrapper {
+    @include indie;
+    .bg-wrapper {
+      background-image: url(../img/top-bg.jpg);
+      nav {
+        position: relative;
+        background-color: #0b333f;
+        border-bottom: 2px solid gold;
+        .flex-nav {
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 30px 0;
+          .navLeft {
+            flex-basis: 20%;
+            padding-left: 0;
+            font-size: 42px;
+            text-align: center;
+          }
+          .navRight {
+            flex-basis: 80%;
+            .menu {
+              text-align: left;
+              display: none;
+              i {
+                border-radius: 10%;
+                padding: 5px;
+                background-color: gold;
+                font-size: 22px;
+              }
+              i:hover {
+                background-color: darkgrey;
+              }
+            }
+            .nav-links {
+              //display: none;
+              z-index: 1;
+              height: 100%;
+              transition: height 0s ease;
+              position: static;
+              display: flex;
+              justify-content: space-around;
+              width: 100%;
+              top: 100%;
+              left: 0;
+              background-color: #0b333f;
+              padding-left: 0;
+              font-size: 18px;
+              color: white;
+              li {
+                list-style-type: none;
+                padding: 10px 0;
+                a {
+                  color: white;
+                  text-decoration: none;
+                }
+              }
+              li:hover a {
+                color: gold;
+              }
+              .more {
+                position: relative;
+                width: 70px;
+                .dropDown {
+                  position: absolute;
+                  border: 1px solid gold;
+                  left: 0;
+                  top: 100%;
+                  padding: 0 20px;
+                  background-color: gray;
+                  //z-index: 2;
+                  display: none;
+                  a {
+                    color: white;
+                    padding: 10px 0;
+                  }
+                }
+              }
+              .more:hover a {
+                color: gold;
+              }
+              .more:hover .dropDown {
+                display: block;
+              }
+            }
+            .nav-links.height {
+              height: 300%;
+            }
+            .nav-links.active {
+              display: block;
+            }
           }
         }
       }
