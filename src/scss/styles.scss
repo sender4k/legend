@@ -1,0 +1,53 @@
+@import "mixins";
+@import "variables";
+@import "normalize";
+//@import "alternative-normalize";
+
+.wrapper {
+  @include indie;
+  .bg-wrapper {
+    background-image: url(../img/top-bg.jpg);
+    nav {
+      position: relative;
+      background-color: #0b333f;
+      border-bottom: 2px solid gold;
+      .flex-nav {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0;
+        .navLeft {
+          flex-basis: 50%;
+          padding-left: 100px;
+          font-size: 42px;
+          text-align: left;
+        }
+        .navRight {
+          flex-basis: 50%;
+          .menu {
+            text-align: center;
+            i{
+              border-radius: 10%;
+              padding: 5px;
+              background-color: gold;
+              font-size: 22px;
+            }
+            i:hover {
+              background-color: darkgrey;
+            }
+          }
+          .nav-links {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+          }
+          .moreDropdown {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
