@@ -301,10 +301,19 @@ template {
 }
 
 .wrapper {
+  background-color: #f0f0f0;
   font-family: "Indie Flower", cursive;
 }
 .wrapper .bg-wrapper {
+  z-index: 3;
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  box-shadow: 0 5px 5px black;
   background-image: url(../img/top-bg.jpg);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 .wrapper .bg-wrapper nav {
   position: relative;
@@ -320,7 +329,6 @@ template {
 }
 .wrapper .bg-wrapper nav .flex-nav .navLeft {
   flex-basis: 50%;
-  padding-left: 100px;
   font-size: 42px;
   text-align: left;
 }
@@ -398,7 +406,7 @@ template {
     font-family: "Indie Flower", cursive;
   }
   .wrapper .bg-wrapper {
-    background-image: url(../img/top-bg.jpg);
+    width: 100%;
   }
   .wrapper .bg-wrapper nav {
     position: relative;
@@ -489,6 +497,396 @@ template {
   .wrapper .bg-wrapper nav .flex-nav .navRight .nav-links.active {
     display: block;
   }
+}
+.social {
+  padding: 50px 5px 100px 5px;
+}
+.social h1 {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+}
+.social p {
+  color: #ffffff;
+  font-family: "Sarabun", sans-serif;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .social form {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+.social form input {
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  font-family: "Sarabun", sans-serif;
+}
+@media only screen and (min-width: 768px) {
+  .social form input {
+    width: 70%;
+  }
+}
+.social form button {
+  background-color: gold;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px 20px;
+  margin-top: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .social form button {
+    display: inline-block;
+  }
+}
+.social button:hover {
+  background-color: darkgrey;
+}
+.social .social-icons {
+  padding: 0 40px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  color: gold;
+}
+.social .social-icons i {
+  font-size: 50px;
+}
+.social .social-icons i:hover {
+  color: darkgrey;
+}
+
+.text-area {
+  z-index: 1;
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  padding: 100px 0;
+  text-align: center;
+  background-color: gold;
+  color: #ffffff;
+  font-size: 30px;
+  box-shadow: 0 5px 5px gray;
+}
+@media only screen and (min-width: 768px) {
+  .text-area {
+    width: 100%;
+  }
+}
+
+.portfolio {
+  padding: 50px 0;
+  width: 95%;
+  margin: 0 auto;
+}
+.portfolio .border {
+  border-bottom: 2px solid white;
+  width: 95%;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 768px) {
+  .portfolio .border {
+    width: 100%;
+  }
+}
+.portfolio p {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 30px;
+}
+.portfolio .pc-icon {
+  text-align: center;
+  width: 100%;
+  margin-top: 100px;
+}
+.portfolio .pc-icon i {
+  font-size: 60px;
+  color: #ffffff;
+  background-color: black;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 20px;
+}
+.portfolio .pc-icon i:hover {
+  color: gold;
+  background-color: darkgrey;
+  border: 1px solid darkgrey;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.portfolio .flex-gallery {
+  margin: 100px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .portfolio .flex-gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .portfolio .flex-gallery {
+    width: 80%;
+  }
+}
+.portfolio .flex-gallery .box {
+  width: 100%;
+  margin-top: 30px;
+}
+@media only screen and (min-width: 768px) {
+  .portfolio .flex-gallery .box {
+    width: 30%;
+  }
+}
+.portfolio .flex-gallery .box img {
+  max-width: 100%;
+  transition: opacity 1s ease;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.portfolio .flex-gallery .box img:hover {
+  opacity: 0.7;
+}
+.portfolio .flex-gallery .box h1 {
+  padding-top: 20px;
+}
+.portfolio .flex-gallery .box p {
+  font-size: 18px;
+  padding: 0;
+  letter-spacing: 1px;
+  line-height: 22px;
+  text-align: left;
+  font-family: "Sarabun", sans-serif;
+}
+.portfolio .flex-gallery .box a {
+  margin-top: 20px;
+}
+.portfolio .borderBtm {
+  border-bottom: 2px solid white;
+  margin-top: 50px;
+}
+
+.services {
+  padding: 100px 0;
+}
+.services .cog {
+  text-align: center;
+}
+.services .cog .fa-cog {
+  font-size: 80px;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: gray;
+  transition: transform 1s ease-in-out;
+}
+.services .cog .fa-cog:hover {
+  transform: rotate(520deg);
+}
+.services p {
+  font-size: 28px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.services .flexBox {
+  width: 90%;
+  margin: 0 auto;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .services .flexBox {
+    width: 100%;
+    background-color: #f0f0f0;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0 30px;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .services .flexBox {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .services .flexBox .fB {
+    margin-left: 20px;
+    background-color: lightgray;
+  }
+}
+.services .flexBox .fB a {
+  text-decoration: none;
+}
+.services .flexBox .fB a i {
+  margin-top: 20px;
+  font-size: 70px;
+  color: gold;
+}
+.services .flexBox .fB a h2 {
+  font-size: 30px;
+  margin-top: 20px;
+  color: black;
+}
+.services .flexBox .fB a p {
+  text-align: left;
+  color: #000;
+  font-size: 18px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  font-family: "Sarabun", sans-serif;
+}
+@media only screen and (min-width: 768px) {
+  .services .flexBox .b1 {
+    margin-left: 0;
+  }
+}
+.services .flexBox .fB:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (min-width: 1170px) {
+  .blog {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.blog .pen {
+  text-align: center;
+}
+.blog .pen i {
+  font-size: 70px;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  transition: transform 1s ease;
+}
+.blog .pen i:hover {
+  transform: translate(-100px, 70px);
+}
+.blog h1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.blog .flexBlog {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .blog .flexBlog {
+    flex-direction: row;
+  }
+}
+.blog .flexBlog .blog {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 30px;
+  transition: transform 0.2s linear;
+}
+@media only screen and (min-width: 768px) {
+  .blog .flexBlog .blog {
+    width: 30%;
+    margin-left: 5%;
+  }
+}
+.blog .flexBlog .blog a img {
+  width: 100%;
+}
+.blog .flexBlog .blog h3 {
+  text-align: center;
+  margin-top: 20px;
+}
+.blog .flexBlog .blog p {
+  font-size: 18px;
+  margin-top: 20px;
+}
+.blog .flexBlog .blog span a {
+  text-decoration: none;
+  margin-top: 20px;
+  color: orange;
+  font-family: "Sarabun", sans-serif;
+  padding: 0 0 30px 20px;
+}
+@media only screen and (min-width: 768px) {
+  .blog .flexBlog .blog-box1 {
+    margin-left: 1.5%;
+  }
+}
+.blog .flexBlog .blog:hover {
+  transform: scale(1.1);
+}
+
+.form {
+  position: relative;
+  margin: 0 auto;
+  padding: 100px 15px;
+  background-color: #312a1e;
+}
+.form .contact h1 {
+  color: white;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.form .contact .formCont input[type=text] {
+  padding: 15px 0;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+.form .contact .formCont input[type=email] {
+  padding: 15px 0;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+.form .contact .formCont textarea {
+  width: 100%;
+  height: 100px;
+  resize: both;
+}
+.form .accordion {
+  background-color: white;
+  margin-top: 30px;
+  font-family: "Sarabun", sans-serif;
+  padding: 10px 20px;
+}
+.form .accordion:hover {
+  background-color: lightgray;
+}
+.form .out {
+  padding: 30px 50px;
+  display: none;
+  background-color: white;
+  font-family: "Sarabun", sans-serif;
+}
+.form .afirm {
+  display: none;
+  position: absolute;
+  font-size: 42px;
+  width: 100%;
+  z-index: 2;
+  height: 450px;
+  top: 0;
+  left: 0;
+  background-color: #312a1e;
+}
+.form .afirm p {
+  text-align: center;
+  margin-top: 100px;
 }
 
 /*# sourceMappingURL=styles.css.map */

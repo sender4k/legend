@@ -4,9 +4,18 @@
 //@import "alternative-normalize";
 
 .wrapper {
+  background-color: #f0f0f0;
   @include indie;
   .bg-wrapper {
+    z-index: 3;
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+    box-shadow: 0 5px 5px black;
     background-image: url(../img/top-bg.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     nav {
       position: relative;
       background-color: #0b333f;
@@ -19,7 +28,6 @@
         padding: 30px 0;
         .navLeft {
           flex-basis: 50%;
-          padding-left: 100px;
           font-size: 42px;
           text-align: left;
         }
@@ -40,7 +48,6 @@
           .nav-links {
             display: none;
             z-index: 1;
-            //height: 0;
             transition: visibility 1s ease;
             position: absolute;
             width: 100%;
@@ -101,7 +108,7 @@
   .wrapper {
     @include indie;
     .bg-wrapper {
-      background-image: url(../img/top-bg.jpg);
+      width: 100%;
       nav {
         position: relative;
         background-color: #0b333f;
@@ -193,6 +200,383 @@
           }
         }
       }
+    }
+  }
+}
+
+.social {
+  padding: 50px 5px 100px 5px;
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+  }
+  p {
+    color: #ffffff;
+    @include sarabun;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  form {
+    @include breakpoint($tablet) {
+      width: 50%;
+      margin: 0 auto;
+    }
+    input {
+      width: 100%;
+      padding: 15px 0;
+      text-align: center;
+      @include sarabun;
+      @include breakpoint($tablet) {
+        width: 70%;
+      }
+    }
+    button {
+      background-color: gold;
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      padding: 15px 20px;
+      margin-top: 20px;
+      @include breakpoint($tablet) {
+        display: inline-block;
+      }
+    }
+  }
+  button:hover {
+    background-color: darkgrey;
+  }
+  .social-icons {
+    padding: 0 40px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: gold;
+    i {
+      font-size: 50px;
+    }
+    i:hover {
+      color: darkgrey;
+    }
+  }
+}
+
+.text-area {
+  @include breakpoint($tablet) {
+    width: 100%;
+  }
+  z-index: 1;
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  padding: 100px 0;
+  text-align: center;
+  background-color: gold;
+  color: #ffffff;
+  font-size: 30px;
+  box-shadow: 0 5px 5px gray;
+}
+
+.portfolio {
+  padding: 50px 0;
+  width: 95%;
+  margin: 0 auto;
+  .border {
+    border-bottom: 2px solid white;
+    width: 95%;
+    margin: 0 auto;
+    @include breakpoint($tablet){
+      width: 100%;
+    }
+  }
+  p {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+  }
+  .pc-icon {
+    text-align: center;
+    width: 100%;
+    margin-top: 100px;
+    i {
+      font-size: 60px;
+      color: #ffffff;
+      background-color: black;
+      margin: 0 auto;
+      border: 1px solid black;
+      border-radius: 50%;
+      padding: 20px;
+    }
+    i:hover {
+      color: gold;
+      background-color: darkgrey;
+      border: 1px solid darkgrey;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  }
+  .flex-gallery {
+    margin: 100px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    @include breakpoint($tablet) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    @include breakpoint($full_screen) {
+      width: 80%;
+    }
+    .box {
+      width: 100%;
+      margin-top: 30px;
+      @include breakpoint($tablet) {
+        width: 30%;
+      }
+      img {
+        max-width: 100%;
+        transition: opacity 1s ease;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+      img:hover {
+        opacity: 0.7;
+      }
+      h1 {
+        padding-top: 20px;
+      }
+      p {
+        font-size: 18px;
+        padding: 0;
+        letter-spacing: 1px;
+        line-height: 22px;
+        text-align: left;
+        @include sarabun;
+      }
+      a {
+        margin-top: 20px;
+      }
+    }
+  }
+  .borderBtm {
+    border-bottom: 2px solid white;
+    margin-top: 50px;
+  }
+}
+.services {
+  padding: 100px 0;
+  .cog {
+    text-align: center;
+    .fa-cog {
+      font-size: 80px;
+      padding: 15px;
+      border-radius: 50%;
+      background-color: gray;
+      transition: transform 1s ease-in-out;
+    }
+    .fa-cog:hover {
+      transform: rotate(520deg);
+    }
+  }
+  p {
+    font-size: 28px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .flexBox {
+    @include breakpoint($tablet){
+      width: 100%;
+      background-color: #f0f0f0;
+      justify-content: space-between;
+      flex-direction: row;
+      padding: 0 30px;
+    }
+    @include breakpoint($full_screen){
+      width: 80%;
+    }
+    width: 90%;
+    margin: 0 auto;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .fB {
+      @include breakpoint($tablet) {
+        margin-left: 20px;
+        background-color: lightgray;
+      }
+      a {
+        text-decoration: none;
+        i {
+          margin-top: 20px;
+          font-size: 70px;
+          color: gold;
+        }
+        h2 {
+          font-size: 30px;
+          margin-top: 20px;
+          color: black;
+        }
+        p {
+          text-align: left;
+          color: #000;
+          font-size: 18px;
+          padding-left: 20px;
+          padding-bottom: 20px;
+          @include sarabun;
+        }
+      }
+    }
+    .b1 {
+      @include breakpoint($tablet) {
+        margin-left: 0;
+      }
+    }
+    .fB:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  }
+}
+
+.blog {
+  //background-color: black;
+  @include breakpoint($full_screen) {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .pen {
+    text-align: center;
+    i {
+      font-size: 70px;
+      padding: 15px;
+      border-radius: 50%;
+      background-color: black;
+      color: white;
+      transition: transform 1s ease;
+    }
+    i:hover {
+      transform: translate(-100px, 70px);
+    }
+  }
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .flexBlog {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    @include breakpoint($tablet) {
+      flex-direction: row;
+    }
+    .blog {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      margin-bottom: 30px;
+      transition: transform 0.2s linear;
+      @include breakpoint($tablet) {
+        width: 30%;
+        margin-left: 5%;
+      }
+      a {
+        img {
+          width: 100%;
+        }
+      }
+      h3 {
+        text-align: center;
+        margin-top: 20px;
+      }
+      p {
+        font-size: 18px;
+        margin-top: 20px;
+      }
+      span {
+        a {
+          text-decoration: none;
+          margin-top: 20px;
+          color: orange;
+          @include sarabun;
+          padding: 0 0 30px 20px;
+        }
+      }
+    }
+    .blog-box1 {
+      @include breakpoint($tablet) {
+        margin-left: 1.5%;
+      }
+    }
+    .blog:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.form {
+  position: relative;
+  margin: 0 auto;
+  padding: 100px 15px;
+  background-color: #312a1e;
+  .contact {
+    h1 {
+      color: white;
+      text-align: center;
+      padding-bottom: 30px;
+    }
+    .formCont {
+      input[type=text] {
+        padding: 15px 0;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 100%;
+      }
+      input[type=email]{
+        padding: 15px 0;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 100%;
+      }
+      textarea {
+        width: 100%;
+        height: 100px;
+        resize: both;
+      }
+    }
+  }
+  .accordion {
+    background-color: white;
+    margin-top: 30px;
+    @include sarabun;
+    padding: 10px 20px;
+  }
+  .accordion:hover {
+    background-color: lightgray;
+  }
+  .out {
+    padding: 30px 50px;
+    display: none;
+    background-color: white;
+    @include sarabun;
+  }
+  .afirm {
+    display: none;
+    position: absolute;
+    font-size: 42px;
+    width: 100%;
+    z-index: 2;
+    height: 450px;
+    top: 0;
+    left: 0;
+    background-color: #312a1e;
+    p {
+      text-align: center;
+      margin-top: 100px;
     }
   }
 }
